@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans&family=Roboto&family=Signika+Negative&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply font-bold text-4xl my-5
+    }
+
+    h2 {
+        @apply font-semibold text-2xl my-5
+    }
+
+    h3 {
+        @apply font-semibold my-5
+    }
+}
+
+.flex-center {
+    @apply flex justify-center items-center;
+}
+  
+.flex-start {
+    @apply flex justify-start items-start;
+}
+  
+.flex-end {
+    @apply flex justify-end items-center;
+}
+  
+.flex-between {
+    @apply flex justify-between items-center;
+}
+
+.app {
+    @apply relative flex flex-col justify-center items-center max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.head_text {
+    @apply mt-5 text-5xl font-opensans font-extrabold leading-[1.15] text-black sm:text-6xl;
+}
+
+.intro {
+    @apply my-5 text-2xl font-opensans italic
+}
+
+.nav_button {
+    @apply py-2 px-3 rounded-sm hover:bg-slate-100 font-semibold font-opensans text-xl
+}
