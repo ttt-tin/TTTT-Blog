@@ -37,6 +37,7 @@ const Category = () => {
         <div className="grid grid-cols-2 md:grid-rows-4 md:grid-flow-col gap-4">
           {category.map((type) => (
             <div
+            key={type}
               className="p-3 rounded-lg border border-1 cursor-pointer bg-slate-100 w-48"
               onClick={() => {
                 handleTypeClick && handleTypeClick(type);
