@@ -6,15 +6,6 @@ import { useEffect, useState } from "react";
 
 export const revalidate = 86400
 
-export function generateMetadata({ params }) {
-    const searchParams = useSearchParams();
-    const searchValue = searchParams.get("value");
-
-    return {
-        title: `Search results for ${searchValue}`
-    }
-}
-
 const searchPage = ({ params }) => {
     const searchParams = useSearchParams();
     const searchValue = searchParams.get("value");

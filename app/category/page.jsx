@@ -5,12 +5,6 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 export const revalidate = 86400;
 
-export function generateMetadata() {
-  return {
-    title: "Category",
-  };
-}
-
 const Category = () => {
   const router = useRouter();
   const [category, setCategory] = useState([]);

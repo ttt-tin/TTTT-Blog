@@ -9,12 +9,12 @@ const PostList = ({ posts }) => {
   const [postsPerPage, setPostsPerPage] = useState(5)
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = posts?.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <section className='flex-start flex-col mx-auto rounded-lg shadow-sm border border-1 bg-white px-16 py-8 gap-5 my-10 relative'>
-      {currentPosts.map((post) => (
+      {currentPosts?.map((post) => (
         <PostCard
           key={post.id}
           id={post.id}
@@ -25,7 +25,7 @@ const PostList = ({ posts }) => {
       ))}
       <Pagination 
         postsPerPage={postsPerPage}
-        totalPosts={posts.length}
+        totalPosts={posts?.length}
         paginate={paginate}
         currentPage={currentPage}
       />
