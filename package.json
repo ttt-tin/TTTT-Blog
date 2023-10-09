@@ -7,10 +7,7 @@
     "build": "next build",
     "start": "next start -p 5000",
     "lint": "next lint",
-    "postbuild": "next-sitemap",
-    "prepare": "husky install",
-    "cache-posts": "node .next/server/cache.js",
-    "pre-commit": "npm cache-posts && git add cache/blog.js"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "autoprefixer": "10.4.15",
